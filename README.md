@@ -60,7 +60,7 @@ la taille indiquée a droite des commentaire est la taille que prends chacune de
 	        sti r5, r2, %354        ;les copies 354 plus loin + la valeur dans r2      	taille :  6
 	        sub r4, r4, r4          ;condition pour le prochain zjmp, set la carry à 1 	taille :  5
 	        zjmp %:loop             ;retour au debut de boucle              		taille :  3
-	end:    zjmp %344               ;saute au debut du programme copié (354 - la taille en mémoire depuis l'appel de sti 						donc 14 + 4 car le dernier stock se fait à 354+4)	taille :  3
+	end:    zjmp %344               ;saute au debut du programme copié (354 - la taille en mémoire depuis l'appel de sti donc 14 + 4 car le dernier stock se fait à 354+4)	taille :  3
 	                                ;                                       		total  : 55
 pour bien comprendre on va découper ce qu'elle effectue etape par etape (je vous conseille de suivre en regardant le programme et en marquant où se trouve le processus
 
