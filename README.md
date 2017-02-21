@@ -11,13 +11,10 @@ commencons par le commencement, comment dire "live" ?
 
 regardons ce que le zork fait:
 
-l2: sti r1,%:live,%0x1 ;=> il stock ce qui est contenu dans le registre 1 à l'adresse du flag "live" + 1
-
-	and r1,%0,r1 ;=> cela permet de set la carry à 0, ce qui est necessaire pour zjmp
-
-live: live %1 ; il dit live, avec le bon nom de joueur, puisque %1 aura été remplacé (voir plus loin)
-
-	zjmp %:live ; il retourne a l'adresse du flag live
+	l2: sti r1,%:live,%0x1 ;=> il stock ce qui est contenu dans le registre 1 à l'adresse du flag "live" + 1
+		and r1,%0,r1 ;=> cela permet de set la carry à 0, ce qui est necessaire pour zjmp
+	live: live %1 ; il dit live, avec le bon nom de joueur, puisque %1 aura été remplacé (voir plus loin)
+		zjmp %:live ; il retourne a l'adresse du flag live
 
 
 pour bien comprendre, il faut savoir que le nom de joueur est contenu dans le registre 1 au début de la partie,
