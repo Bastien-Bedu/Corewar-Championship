@@ -35,12 +35,9 @@ l2: sti r1,%:live,%0x1
 
 en l'effectuant, il va remplacer le nom de joueur de notre zork dans live (+1) par son registre 1 propre (souvent son nom de joueur à lui), notre zork devient donc
 
-l2: sti r1,%:live,%0x1 ;=> il stock ce qui est contenu dans le registre 1 à l'adresse du flag "live" + 1
-
-	and r1,%0,r1
-
-live: live %1 ; il dit live, avec le registre 1 du joueur ennemi, puisque %1 a été remplacé
-
-	zjmp %:live ; il retourne a l'adresse du flag live
+	l2: sti r1,%:live,%0x1 ;=> il stock ce qui est contenu dans le registre 1 à l'adresse du flag "live" + 1
+		and r1,%0,r1
+	live: live %1 ; il dit live, avec le registre 1 du joueur ennemi, puisque %1 a été remplacé
+		zjmp %:live ; il retourne a l'adresse du flag live
 
   notre zork n'est donc plus viable, il ne dit plus qu'il est en vie, et meurt donc, le joueur ennemi gagne donc
