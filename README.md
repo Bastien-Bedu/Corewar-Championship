@@ -1,7 +1,7 @@
 # Corewar-Championship
 projet epitech
 
-ceci est une aide pour comprendre le sujet du corewar championship
+ceci concerne le sujet du corewar championship
 
 Le sujet n'étant pas tres explicite, je vais réaliser une petite aide
 
@@ -19,7 +19,7 @@ regardons ce que le zork fait:
 
 pour bien comprendre, il faut savoir que le nom de joueur est contenu dans le registre 1 au début de la partie,
 
-un registre est plus ou moins comme une variable, il contient 4 octets, donc lorsqu'on le stock dans la memoire il va écraser les 4 octets à partir de l'adresse indiquée (ici à partir de live + 1, donc les 4 octets suivant la fonction... autrement dit il ecrasera le 1er argument, voila pourquoi beaucoup de personne disent que le parametre de live n'est pas important).
+un registre est plus ou moins comme une variable, il contient 4 octets, donc lorsqu'on le store dans la mémoire il va écraser les 4 octets à partir de l'adresse indiquée (ici à partir de live + 1, donc les 4 octets suivant la fonction... autrement dit il ecrasera le 1er argument, voila pourquoi beaucoup de personne disent que le paramètre de live n'est pas important).
 
 live prend 5 places en mémoire, le premier octet est là pour la fonction live, tandis que les 4 suivants correspondent à l'argument  qui lui est passé en paramètre.
 
