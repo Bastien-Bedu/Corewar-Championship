@@ -1,3 +1,4 @@
 # Corewar-Championship
-projet epitech\n
+projet epitech
+
 ceci est une aide pour comprendre le sujet du corewar championship
